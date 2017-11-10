@@ -1,7 +1,7 @@
 # xTidalx
 Archive of amazing Tidal things
 
-// how do you randomly play a sample?
+// how do you play a sample randomly?
 ```
 d1 $ sometimesBy 0.2 (const silence) $ s "bd"
 d1 $ degradeBy 0.2 $ s "bd"
