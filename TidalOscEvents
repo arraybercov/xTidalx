@@ -1,40 +1,7 @@
-jarm [2:46 PM] 
-ok so here’s the question
+// if I wanted to know *everything* that was going to happen in the next X cycles. Can ask ‘what is going to happen at cycle X?’
 
-
-[2:46] 
-if I wanted to know *everything* that was going to happen in the next X cycles
-
-
-[2:46] 
-is that actually possible?
-
-
-[2:47] 
-or would that require asking if there was an event occurring every infinite step?
-
-
-la_gauche [2:48 PM] 
-Is this a technical or philosophical question? : ) jk
-
-
-jarm [2:48 PM] 
-@yaxu was saying previously that you can ask ‘what is going to happen at cycle X?’
-
-
-[2:48] 
-im still confused about how i would get a dump of X future events
-
-
-[2:49] 
-i assume tidal-vis does it
-
-
-yaxu [2:50 PM] 
 ok say you have a pattern `let mypattern = (every 2 (fast 2) "a b c") :: Pattern String`
 
-
-[2:50] 
 there's a function `arc` for getting events out of it
 
 
