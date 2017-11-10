@@ -1,64 +1,15 @@
 > if I wanted to know *everything* that was going to happen in the next X cycles. Can ask ‘what is going to happen at cycle X?’
 
-ok say you have a pattern `let mypattern = (every 2 (fast 2) "a b c") :: Pattern String`. There's a function `arc` for getting events out of it.
-
-an arc is basically a timespan
+ok say you have a pattern `let mypattern = (every 2 (fast 2) "a b c") :: Pattern String`. There's a function `arc` for getting events out of it. An arc is basically a timespan. So to get the first cycle you'd do `arc mypattern (0,1)` and get `[((0 % 1,1 % 6),(0 % 1,1 % 6),"a"),((1 % 6,1 % 3),(1 % 6,1 % 3),"b"),((1 % 3,1 % 2),(1 % 3,1 % 2),"c"),((1 % 2,2 % 3),(1 % 2,2 % 3),"a"),((2 % 3,5 % 6),(2 % 3,5 % 6),"b"),((5 % 6,1 % 1),(5 % 6,1 % 1),"c")]`. Each event has two arcs, for the purposes of visualisation you can just take the second one I think. That's just a pattern of strings. A parameter is a pattern of associative arrays
 
 
-[2:51] 
-so to get the first cycle you'd do `arc mypattern (0,1)`
+
+> If i was trying to get events from `d3 $ every 2 (fast 2) $ sound "bd [hh, lt]" # gain "0.2" # orbit "0"`
+> would i need to separately define it as a pattern using `let`?
+
+You could do `arc (every 2 (fast 2) $ sound "bd [hh, lt]" # gain "0.2" # orbit "0") (0,4)` to get the first four cycles worth for example. In truth that `arc` function is all a pattern is
 
 
-[2:52] 
-and get `[((0 % 1,1 % 6),(0 % 1,1 % 6),"a"),((1 % 6,1 % 3),(1 % 6,1 % 3),"b"),((1 % 3,1 % 2),(1 % 3,1 % 2),"c"),((1 % 2,2 % 3),(1 % 2,2 % 3),"a"),((2 % 3,5 % 6),(2 % 3,5 % 6),"b"),((5 % 6,1 % 1),(5 % 6,1 % 1),"c")]`
-
-
-jarm [2:52 PM] 
-aaaaaaaaah ok
-
-
-[2:53] 
-and if it had more params they would just be included in that dump?
-
-
-yaxu [2:53 PM] 
-each event has two arcs, for the purposes of visualisation you can just take the second one I think
-
-
-[2:54] 
-yes
-
-
-[2:54] 
-that's just a pattern of strings. A parameter is a pattern of associative arrays
-
-
-jarm [2:55 PM] 
-if i was trying to get events from `d3 $ every 2 (fast 2) $ sound "bd [hh, lt]" # gain "0.2" # orbit "0"`
-
-
-[2:55] 
-would i need to separately define it as a pattern using `let`?
-
-
-yaxu [2:56 PM] 
-you could do `arc (every 2 (fast 2) $ sound "bd [hh, lt]" # gain "0.2" # orbit "0") (0,4)` to get the first four cycles worth for example
-
-
-la_gauche [2:57 PM] 
-fun fun, no idea what i can do with those dumps, but good to know about `arc`!
-
-
-jarm [2:57 PM] 
-thats awesome @yaxu
-
-
-yaxu [2:57 PM] 
-in truth that `arc` function is all a pattern is
-
-
-jarm [2:58 PM] 
-ok, so just need to refine this a little bit…
 
 
 [2:58] 
