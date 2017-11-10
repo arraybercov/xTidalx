@@ -4,9 +4,7 @@ ok say you have a pattern `let mypattern = (every 2 (fast 2) "a b c") :: Pattern
 
 there's a function `arc` for getting events out of it
 
-
-[2:51] 
-`an arc is basically a timespan`
+an arc is basically a timespan
 
 
 [2:51] 
