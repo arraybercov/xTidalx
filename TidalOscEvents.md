@@ -1,4 +1,4 @@
-// if I wanted to know *everything* that was going to happen in the next X cycles. Can ask ‘what is going to happen at cycle X?’
+> if I wanted to know *everything* that was going to happen in the next X cycles. Can ask ‘what is going to happen at cycle X?’
 
 ok say you have a pattern `let mypattern = (every 2 (fast 2) "a b c") :: Pattern String`
 
