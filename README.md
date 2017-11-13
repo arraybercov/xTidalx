@@ -47,3 +47,27 @@ solving the problem of trying to ‘toggle’ groups of functions and parameters
        )
      $ sound "[fosc:37 fosc:38?](11,16) [[fosc:36]*6 fosc:35*4]/2"
      # gco' (ssinf 0.6 0.8 (1/10)) 5 8```
+     
+yaxu
+here's an alternative that is more tidalish i think
+```let toggles :: Pattern Int -> [Pattern a] -> Pattern a
+    toggles p xs = unwrap $ (xs !!!) <$> p
+    (!!!) xs n = xs !! (n `mod` length xs)
+```
+ah no that's a bit different
+ ```d1 $ toggles "0 <1 2>"
+  [sound "bd",
+   sound "sn:2*4",
+   sound "arpy(5,8)"
+  ]
+```also useful though
+
+
+jarm
+whats your version doing there @yaxu? isnt that kind of like `ur'`? bi was thinking about how to pattern my toggles and ending up thinking its basically `ur'` my problem with `ur'` is that it’s kind of hard to use a lot of functions
+
+function junky that i am
+
+
+yaxu
+yes maybe similar to `ur'`. I'm too tired to think tbh but seem to be able to write code. Dangerous
