@@ -8,6 +8,7 @@ d1 $ degradeBy 0.2 $ s "bd"
 d1 $ s "bd" # gain (choose [0,0,0,0,1])
 ```
 
+// Toggling functions
 Credit to Jarm:
 Experimenting with toggles for live performance (aka cheating)
 ```let toggle t f p = if (1 == t) then f $ p else id $ p
@@ -65,10 +66,9 @@ also useful though
 
 
 jarm
-whats your version doing there @yaxu? isnt that kind of like `ur'`? i was thinking about how to pattern my toggles and ending up thinking its basically `ur'` my problem with `ur'` is that it’s kind of hard to use a lot of functions
+what's your version doing there @yaxu? isnt that kind of like `ur'`? i was thinking about how to pattern my toggles and ending up thinking its basically `ur'` my problem with `ur'` is that it’s kind of hard to use a lot of functions
 
 function junky that i am
-
 
 yaxu
 yes maybe similar to `ur'`. I'm too tired to think tbh but seem to be able to write code. Dangerous
