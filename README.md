@@ -60,11 +60,14 @@ ah no that's a bit different
    sound "sn:2*4",
    sound "arpy(5,8)"
   ]
-```also useful though
+```
+also useful though
 
 
 jarm
-whats your version doing there @yaxu? isnt that kind of like `ur'`? bi was thinking about how to pattern my toggles and ending up thinking its basically `ur'` my problem with `ur'` is that it’s kind of hard to use a lot of functions
+whats your version doing there @yaxu? isnt that kind of like 
+`ur'`
+? bi was thinking about how to pattern my toggles and ending up thinking its basically `ur'` my problem with `ur'` is that it’s kind of hard to use a lot of functions
 
 function junky that i am
 
