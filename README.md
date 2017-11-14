@@ -47,7 +47,8 @@ solving the problem of trying to ‘toggle’ groups of functions and parameters
          (# rvb' "[0.8 0.6 0.2]/3" "[0.2 0.4 0.8]/4")
        )
      $ sound "[fosc:37 fosc:38?](11,16) [[fosc:36]*6 fosc:35*4]/2"
-     # gco' (ssinf 0.6 0.8 (1/10)) 5 8```
+     # gco' (ssinf 0.6 0.8 (1/10)) 5 8
+```
      
 yaxu
 here's an alternative that is more tidalish i think
