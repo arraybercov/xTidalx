@@ -164,3 +164,17 @@ a parampattern can't really modulate another thing unless you first deconstruct 
 new messages
 bgold [3:39 PM] 
 Isn't conditioning a function off of `y <- rand` equivalent to `sometimes`?  Though the saw usage is interesting, and there are probably neat binary functions that could apply to patterns that aren't implemented yet.
+
+yaxu [6:28 PM] 
+Here's a thing to magically turn one connection into multiple connections
+wondering whether this would help with the midi time drift issues
+```let multiplex n f = do mv <- newMVar $ replicate n silence
+                       return $ map (swap mv) [0 .. n-1]
+                         where swap mv n v = do xs <- takeMVar mv
+                                                let (h,t) = splitAt n xs
+                                                    xs' = h ++ (v:t)
+                                                putMVar mv xs'
+                                                f $ stack xs'
+
+(x1:x2:x3:x4:x5:x6:[]) <- multiplex 6 d1
+```
