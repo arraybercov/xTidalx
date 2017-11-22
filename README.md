@@ -179,3 +179,6 @@ wondering whether this would help with the midi time drift issues
 
 (x1:x2:x3:x4:x5:x6:[]) <- multiplex 6 d1
 ```
+
+Jarm:
+I can highly recommend `let contToPat n p = fmap round $ discretise n p` for drawing melodies with continuous signals
